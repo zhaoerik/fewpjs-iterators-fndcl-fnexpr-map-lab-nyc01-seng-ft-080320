@@ -18,4 +18,5 @@ const titleCased = () => {
       word.toUpperCase()
     }))
   }
+  return array
 }
