@@ -12,11 +12,11 @@ const tutorials = [
 ];
 
 const titleCased = () => {
-  const array = []
-  for (let i = 0; i < tutorials.length; i++) {
-    array.push(tutorials[i].split(' ').map(word => {
-      word.toUpperCase()
-    }))
-  }
-  return array
+  return tutorials.map(question => {
+    let words = question.split(' ')
+    let capitalizedWord = 
+      words.map(word => word.charAt(0).toUpperCase() + word.slice(1))
+    let answer = capitalizedWord.join(' ')
+    return answer
+  })
 }
